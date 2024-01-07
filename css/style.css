@@ -1,0 +1,233 @@
+/*Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+
+/********************************************************/
+/* INICIO ESTILOS PARA LA BARRA DE NAVEGACIÓN           */
+/********************************************************/
+header {
+    background-color: #053B50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+header img {
+    width: 40px;
+    filter: invert(100%);
+}
+
+#icono-menu {
+    width: 40px;
+    filter: invert(100%);
+    display: none;
+    cursor: pointer;
+}
+
+nav {
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    transition-property: color;
+    transition-duration:  0.5s;
+    text-decoration: none;
+    padding: 0.25rem;
+    border-radius: 2px;
+    color: #fff;    
+}
+
+nav li a:hover {
+    color: rgb(29, 164, 241);
+}
+
+#listado {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 840px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #icono-menu {
+        display: initial;
+    }
+
+    #cabecera {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #listado {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        align-self: center;
+        height:calc(100vh - 3.5rem) ;
+    }
+
+    .mostrar {
+        display: initial;
+    }
+
+    .ocultar {
+        display: none;
+    }
+
+}
+
+/********************************************************/
+/* FIN ESTILOS PARA LA BARRA DE NAVEGACIÓN              */
+/********************************************************/
+
+
+/********************************************************/
+/* INICIO ESTILOS PARA EL FORMULARIO                    */
+/********************************************************/
+
+.contacto {
+
+    margin: 2em; /*SAV: REVISAR*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contacto1 {
+    padding: 2rem;
+    background-color: #eff4f7;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 7px 15px 0 rgba(20, 20, 20, 0.3);
+}
+
+.contacto1 h2, .contacto1 svg, .iconoWhatsapp{
+    align-self: center;  
+}
+.contacto1 h2 {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.iconoWhatsapp {
+    color:#25D366;
+}
+
+.iconosContacto {
+    display: flex;
+    gap: 0.5rem;
+    color: #000;
+}
+
+
+.mail {
+    transition-property: color;
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+
+.mail:hover {
+    color: rgb(29, 164, 241);
+}
+
+form {
+    padding: 2rem;
+    border: 4px solid #eff4f7; 
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 60%;
+    box-shadow: 10px 7px 15px 0 rgba(20, 20, 20, 0.3);
+}
+
+.camposform{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+}
+
+.campo-invalido{
+    font-size: 0.75rem;
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.d-none {
+   display: none;
+}
+
+
+input, select, textarea{
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height:2rem;
+    padding-left: 1rem; 
+    border: 2px solid #eff4f7; 
+    border-radius: 5px;
+}
+
+.mensaje {
+    height: 6rem;
+    padding: 0.5rem 1rem;
+
+}
+
+button {
+    background-color: #eff4f7; 
+    border: 1px solid #eff4f7 ;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    font-size: 16px;
+      
+}
+
+
+@media screen and (max-width: 840px) {
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contacto1 {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+        box-shadow: 7px 0px 15px 0 rgba(20, 20, 20, 0.3);
+    }
+
+    form {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0px;
+        width: 100%;
+    }
+  
+}
